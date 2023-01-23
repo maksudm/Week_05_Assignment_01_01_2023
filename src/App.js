@@ -53,23 +53,10 @@ const App = () => {
         <input value={movieTitle} onChange={(event) => setState(event.target.value)} placeholder="Enter movie title" />
         <button type="submit">Search</button>
       </form>
-
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={() => setDarkMode(!isDarkMode)} />
         <label className="form-check-label" for="flexSwitchCheckDefault">Toggle Dark Mode</label>
       </div>
-
-
-
-      {/* <div className="container">
-        <div className="switch-checkbox">
-          <label className="switch">
-            <input type="switch" onChange={() => setDarkMode(!isDarkMode)} />
-            <span className="slider round"> Toggle Dark Mode</span>
-          </label>
-        </div>
-      </div> */}
-
       <div className="container my-3"></div>
       <div className="row justify-content-md-end" style={{ display: "flex", gap: "2rem", width: "100vw" }}>{movies.map((movie, index) => <Movie movie={movie} key={index} />)}</div>
     </div >
